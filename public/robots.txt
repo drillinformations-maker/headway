@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/admin
+Disallow: /api/analytics
+Sitemap: https://headway-broker-guide.vercel.app/sitemap.xml
