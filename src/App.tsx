@@ -401,6 +401,93 @@ export default function App() {
                             </div>
                           )}
 
+                          {section.id === 'worldcup-2026-promotion' && (
+                            <div className="space-y-6">
+                              {/* Descriptive block */}
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Key Highlights Grid */}
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                                <div className="p-5 bg-zinc-50 dark:bg-[#0A0B0D]/50 rounded-2xl border border-zinc-150 dark:border-slate-800/80 space-y-2">
+                                  <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                    <span>Massive Prize Fund &amp; Leaderboards</span>
+                                  </h4>
+                                  <p className="text-zinc-400 text-xs leading-relaxed">
+                                    A grand prize pool of <strong>$100,000 USD</strong> (or more) is assigned for the competition over the course of the promo. The event features global leaderboard metrics and team rankings to award high performers.
+                                  </p>
+                                </div>
+                                
+                                <div className="p-5 bg-zinc-50 dark:bg-[#0A0B0D]/50 rounded-2xl border border-zinc-150 dark:border-slate-800/80 space-y-2">
+                                  <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                    <span>Over 3,000 Winners Scheduled</span>
+                                  </h4>
+                                  <p className="text-zinc-400 text-xs leading-relaxed">
+                                    By building an incredibly inclusive promotional structure, Headway welcomes more than <strong>3,000+ Winners</strong> to share in the cash distributions, vouchers, and tangible devices.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <h4 className="text-base font-black text-zinc-900 dark:text-white mt-4">
+                                  Competition Mechanics &amp; Event Structure
+                                </h4>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                              </div>
+
+                              {/* Highlight Bullet List */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3">
+                                  Verified Highlights (Facts from Source)
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Headway World Cup 2026 Keyword Integration:</strong> Features a dedicated prize pool of $100,000+ USD.</li>
+                                  <li><strong>Flagship 1st Place Spot:</strong> Wins the state-of-the-art Hisense PX3SE-PRO UST Laser Cinema Projector.</li>
+                                  <li><strong>Participant Pool size:</strong> Target pool of 3,000+ Winners.</li>
+                                  <li><strong>Registration Links:</strong> Open globally via the tracking portals below.</li>
+                                  <li><strong>Official Competition timelines and calendars:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Scoring equations and specific lot scales:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Runner-up reward breakdown structure:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 border border-blue-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-blue-500 dark:text-blue-450 uppercase tracking-widest block">
+                                    Official Promotion Entry
+                                  </span>
+                                  <p className="text-xs text-zinc-450 dark:text-zinc-400">
+                                    Register now to claim your place in the Headway World Cup 2026 competition.
+                                  </p>
+                                </div>
+                                <a
+                                  href="https://headway.partners/user/signup?hwp=e4e4f5"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-blue-500/20"
+                                >
+                                  <span>Join Headway World Cup 2026</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </a>
+                              </div>
+
+                              {/* Risk Disclaimer */}
+                              <div className="text-[11px] font-medium text-zinc-500 dark:text-zinc-400 bg-amber-500/5 p-4 rounded-xl border border-amber-500/10 mt-4 flex items-center space-x-2">
+                                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                                <span><strong>Risk Warning:</strong> Trading involves significant risk of loss.</span>
+                              </div>
+                            </div>
+                          )}
+
                           {section.id === 'trading-strategies' && (
                             <div className="space-y-6">
                               <p className="text-zinc-[650] dark:text-zinc-200 text-sm sm:text-base leading-relaxed">
