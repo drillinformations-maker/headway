@@ -24,7 +24,28 @@ export async function trackOutboundClick(anchorName: string, pageOrigin: string)
   }
 }
 
-export function handleAffiliateRedirect(anchorName: string, pageOrigin: string) {
-  trackOutboundClick(anchorName, pageOrigin);
-  window.open(trackingUrl, '_blank', 'noopener,noreferrer');
+export function handleAffiliateRedirect(anchorName: string, pageOrigin: string, customUrl?: string) {
+  const urlToOpen = customUrl || trackingUrl;
+  try {
+    const payload = {
+      page: pageOrigin,
+      anchor: anchorName,
+      url: urlToOpen
+    };
+    
+    // Fire-and-forget back-end analytics register
+    navigator.sendBeacon 
+      ? navigator.sendBeacon('/api/analytics/track-click', JSON.stringify(payload))
+      : fetch('/api/analytics/track-click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        });
+        
+    console.log(`[Affiliate Analytics] Logged outbound click to: ${anchorName}`);
+  } catch (error) {
+    console.error('Click tracking event failure:', error);
+  }
+  window.open(urlToOpen, '_blank', 'noopener,noreferrer');
 }

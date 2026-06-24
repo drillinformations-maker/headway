@@ -13,7 +13,7 @@ import { BlogPost, PageSeoSettings } from './types';
 import { homepageSEOSections } from './data/homepageCopy';
 import { seedBlogsData, seedPageSeoData } from './data/blogSeedData';
 import { handleAffiliateRedirect } from './utils/tracking';
-import { Shield, BookOpen, Clock, ArrowRight, ShieldCheck, TrendingUp, AlertTriangle, Activity } from 'lucide-react';
+import { Shield, BookOpen, Clock, ArrowRight, ShieldCheck, TrendingUp, AlertTriangle, Activity, Percent, Gift, Coins, Trophy, Users } from 'lucide-react';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -488,6 +488,362 @@ export default function App() {
                             </div>
                           )}
 
+                          {section.id === 'deposit-bonus-promotion' && (
+                            <div className="space-y-6 animate-fade-in">
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed font-normal">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Interactive Margin Calculator */}
+                              <div className="my-6">
+                                <DepositBonusCalculator />
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                              </div>
+
+                              {/* Highlight Bullet List */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3 flex items-center space-x-2">
+                                  <Percent className="w-4 h-4 text-blue-500 animate-[pulse_3s_infinite]" />
+                                  <span>Verified Deposit Bonus Specifications</span>
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Margin Booster Support:</strong> Claim a massive +75% bonus directly applied to your first deposit.</li>
+                                  <li><strong>Eligible Accounts:</strong> Applies seamlessly on Cent and Standard account tiers.</li>
+                                  <li><strong>Platform Usability:</strong> Bonus margin integrates perfectly on MetaTrader 4 and MetaTrader 5 terminals.</li>
+                                  <li><strong>Registration requirement:</strong> Must activate the promotion inside the Personal Cabinet prior to depositing.</li>
+                                  <li><strong>Maximum bonus credit cap:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Execution lot volume formulas:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Third-party payment gateways fees:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 border border-blue-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-blue-500 dark:text-blue-450 uppercase tracking-widest block">
+                                    Official 75% Bonus Entry
+                                  </span>
+                                  <p className="text-xs text-zinc-455 dark:text-zinc-400">
+                                    Register and select the promo inside your cabinet to claim your margin booster.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleAffiliateRedirect('Deposit Bonus Promo Entry', currentPage, 'https://headway.partners/promo/deposit-bonus/?hwp=e4e4f5')}
+                                  className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-blue-500/20 cursor-pointer"
+                                >
+                                  <span>Claim 75% Deposit Bonus</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </button>
+                              </div>
+
+                              {/* Risk Warning Disclaimer */}
+                              <div className="text-[11px] font-medium text-zinc-500 dark:text-zinc-400 bg-amber-500/5 p-4 rounded-xl border border-amber-500/10 mt-4 flex items-center space-x-2">
+                                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                                <span><strong>Risk Warning:</strong> Leverage-boosting bonuses increase total open contract size potential. Trading remains highly speculative.</span>
+                              </div>
+                            </div>
+                          )}
+
+                          {section.id === 'bonus-150-promotion' && (
+                            <div className="space-y-6 animate-fade-in">
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed font-normal">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Step pipeline visual */}
+                              <div className="my-6">
+                                <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2 mb-4">
+                                  <Coins className="w-4 h-4 text-emerald-500" />
+                                  <span>The Risk-Free 7-Day Profit Pipeline</span>
+                                </h4>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                  <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-150 dark:border-slate-800/80 space-y-2 relative">
+                                    <span className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-blue-600/10 text-blue-500 flex items-center justify-center font-mono text-xs font-bold border border-blue-500/20">1</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white pt-2">Sign Up &amp; Claim</h5>
+                                    <p className="text-zinc-400 text-[11px] leading-relaxed">
+                                      Register a promo account. Headway instantly pre-funds it with a <strong>$150 USD</strong> trading balance—no deposit or credit card required.
+                                    </p>
+                                  </div>
+                                  <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-150 dark:border-slate-800/80 space-y-2 relative">
+                                    <span className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-blue-600/10 text-blue-500 flex items-center justify-center font-mono text-xs font-bold border border-blue-500/20">2</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white pt-2">Trade for 7 Days</h5>
+                                    <p className="text-zinc-400 text-[11px] leading-relaxed">
+                                      Execute transactions across <strong>5 asset classes</strong> with standard spreads. Refine strategies in live execution for a full week risk-free.
+                                    </p>
+                                  </div>
+                                  <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-500/5 to-teal-500/5 border border-emerald-500/10 space-y-2 relative">
+                                    <span className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-emerald-600/10 text-emerald-500 flex items-center justify-center font-mono text-xs font-bold border border-emerald-500/20">3</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white pt-2">Transfer Your Profits</h5>
+                                    <p className="text-zinc-450 text-[11px] leading-relaxed">
+                                      When the week ends, withdraw or transfer up to <strong>$100 USD</strong> in generated profits directly to a live account after meeting lot targets.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                              </div>
+
+                              {/* Highlights bullet list */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3 flex items-center space-x-2">
+                                  <ShieldCheck className="w-4 h-4 text-blue-500" />
+                                  <span>Verified No-Deposit Bonus Facts</span>
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Bonus Capital:</strong> Zero-risk pre-funded $150 USD promo account balance.</li>
+                                  <li><strong>Withdrawable Cap:</strong> Maximum withdrawable/transferable trial profit is capped at $100 USD.</li>
+                                  <li><strong>Supported Instruments:</strong> Spot Forex, Cryptos, Energies, Market Indices, and Metals.</li>
+                                  <li><strong>Execution Duration:</strong> Strict 7-day trial period after which the initial capital expires.</li>
+                                  <li><strong>Necessary lot quantities to unlock withdrawal:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Maximum active orders count:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Scalping/hedging strategy rules:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border border-emerald-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">
+                                    Risk-Free Registration
+                                  </span>
+                                  <p className="text-xs text-zinc-455 dark:text-zinc-400">
+                                    Open your $150 promo terminal now. Absolutely no deposit or initial credit card details required.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleAffiliateRedirect('No Deposit Bonus Promo Entry', currentPage, 'https://headway.partners/promo/bonus-150/?hwp=e4e4f5')}
+                                  className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-emerald-500/20 cursor-pointer"
+                                >
+                                  <span>Get My $150 No-Deposit Bonus</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </button>
+                              </div>
+                            </div>
+                          )}
+
+                          {section.id === 'giftshop-promotion' && (
+                            <div className="space-y-6 animate-fade-in">
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed font-normal">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Gifts catalog showcase */}
+                              <div className="my-6">
+                                <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2 mb-4">
+                                  <Gift className="w-4 h-4 text-purple-500 animate-[bounce_3s_infinite]" />
+                                  <span>Exclusive Rewards Catalog (Trade Lots, Get Gifts)</span>
+                                </h4>
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                  <div className="p-4 bg-zinc-50 dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/80 text-center space-y-1">
+                                    <span className="text-2xl block">🧢</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white">Broker Merch</h5>
+                                    <p className="text-[10px] text-zinc-450">T-Shirts, Caps &amp; Notebooks</p>
+                                    <span className="text-[10px] font-mono text-purple-500 font-bold block bg-purple-500/10 py-1 rounded-full mt-2">15 Crowns</span>
+                                  </div>
+                                  <div className="p-4 bg-zinc-50 dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/80 text-center space-y-1">
+                                    <span className="text-2xl block">🧥</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white">Premium Hoodies</h5>
+                                    <p className="text-[10px] text-zinc-450">Heavyweight Designer Wear</p>
+                                    <span className="text-[10px] font-mono text-purple-500 font-bold block bg-purple-500/10 py-1 rounded-full mt-2">40 Crowns</span>
+                                  </div>
+                                  <div className="p-4 bg-zinc-50 dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/80 text-center space-y-1">
+                                    <span className="text-2xl block">📱</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white">Apple iPad Air</h5>
+                                    <p className="text-[10px] text-zinc-450">High-Performance Tablet</p>
+                                    <span className="text-[10px] font-mono text-purple-500 font-bold block bg-purple-500/10 py-1 rounded-full mt-2">350 Crowns</span>
+                                  </div>
+                                  <div className="p-4 bg-zinc-50 dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/80 text-center space-y-1">
+                                    <span className="text-2xl block">⚡</span>
+                                    <h5 className="font-bold text-xs text-zinc-900 dark:text-white">iPhone 15 Pro</h5>
+                                    <p className="text-[10px] text-zinc-450">The Ultimate Trader Prize</p>
+                                    <span className="text-[10px] font-mono text-purple-500 font-bold block bg-purple-500/10 py-1 rounded-full mt-2">850 Crowns</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                              </div>
+
+                              {/* Highlights list */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3 flex items-center space-x-2">
+                                  <ShieldCheck className="w-4 h-4 text-purple-500" />
+                                  <span>Verified Giftshop Mechanics</span>
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Loyalty Points:</strong> Earn crowns continuously for every traded standard lot.</li>
+                                  <li><strong>Free Crowns:</strong> Receive 2 Crowns immediately upon joining the Giftshop promotion.</li>
+                                  <li><strong>Redemption Options:</strong> Range from branded broker apparel to Apple electronics, gadgets, and cash.</li>
+                                  <li><strong>Eligible Accounts:</strong> Open to all Cent, Micro, Standard, and Pro account styles.</li>
+                                  <li><strong>The exact conversion coefficient (number of lots per Crown):</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Physical shipping carrier channels:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Crowns expiry policies or inactivity penalties:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 border border-purple-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-purple-500 dark:text-purple-400 uppercase tracking-widest block">
+                                    Official Loyalty Entrance
+                                  </span>
+                                  <p className="text-xs text-zinc-455 dark:text-zinc-400">
+                                    Open the catalog inside your client portal, join the Giftshop, and receive your 2 free Crowns instantly.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleAffiliateRedirect('Giftshop Promo Entry', currentPage, 'https://headway.partners/promo/giftshop/?hwp=e4e4f5')}
+                                  className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-purple-500/20 cursor-pointer"
+                                >
+                                  <span>Join Headway Giftshop</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </button>
+                              </div>
+                            </div>
+                          )}
+
+                          {section.id === 'demo-contests-promotion' && (
+                            <div className="space-y-6 animate-fade-in">
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed font-normal">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Interactive Demo Practice Simulator */}
+                              <div className="my-6">
+                                <DemoContestsVisualizer />
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                              </div>
+
+                              {/* Highlight Bullet List */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3 flex items-center space-x-2">
+                                  <Trophy className="w-4 h-4 text-amber-500 animate-[pulse_3s_infinite]" />
+                                  <span>Verified Demo Contests Specifications</span>
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Zero Risk Capital:</strong> Compete entirely using virtual balances; no deposit or bank cards required.</li>
+                                  <li><strong>The Face-Off Contest Pool:</strong> Combined grand cash prize pool of $3,150 USD.</li>
+                                  <li><strong>Real Winnings Withdrawal:</strong> Earned championship cash is credited directly to active Standard or Cent accounts.</li>
+                                  <li><strong>Supported Platforms:</strong> Fully active on industry-leading MetaTrader 4 and MetaTrader 5 software.</li>
+                                  <li><strong>Contest round duration limits:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Maximum open positions volume:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Sub-account creation frequency:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-amber-600/10 to-orange-600/10 border border-amber-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-amber-500 dark:text-amber-450 uppercase tracking-widest block">
+                                    Official Demo Tournament Entry
+                                  </span>
+                                  <p className="text-xs text-zinc-455 dark:text-zinc-400">
+                                    Join the upcoming Face-Off battle. Form your trading team to split the $3,150 prize pool!
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleAffiliateRedirect('Demo Contests Promo Entry', currentPage, 'https://headway.partners/promo/demo-contests/?hwp=e4e4f5')}
+                                  className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-amber-500/20 cursor-pointer"
+                                >
+                                  <span>Enter Free Demo Contests</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </button>
+                              </div>
+                            </div>
+                          )}
+
+                          {section.id === 'ib-partner-program' && (
+                            <div className="space-y-6 animate-fade-in">
+                              <p className="text-zinc-650 dark:text-zinc-200 text-sm sm:text-base leading-relaxed font-normal">
+                                {section.paragraphs[0]}
+                              </p>
+
+                              {/* Interactive Multi-Level Commission Calculator */}
+                              <div className="my-6">
+                                <IBCommissionCalculator />
+                              </div>
+
+                              <div className="space-y-4 text-sm text-zinc-650 dark:text-zinc-300 leading-relaxed font-normal">
+                                <p>
+                                  {section.paragraphs[1]}
+                                </p>
+                                <p>
+                                  {section.paragraphs[2]}
+                                </p>
+                              </div>
+
+                              {/* Highlight Bullet List */}
+                              <div className="mt-6 border-t border-zinc-100 dark:border-slate-800/50 pt-6">
+                                <h4 className="text-sm font-bold text-zinc-900 dark:text-white mb-3 flex items-center space-x-2">
+                                  <Users className="w-4 h-4 text-purple-500" />
+                                  <span>Verified IB Partner Specifications</span>
+                                </h4>
+                                <ul className="list-disc pl-5 space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
+                                  <li><strong>Spread Share Commission:</strong> Earn up to a massive 42% of the broker's spread on referred client lots.</li>
+                                  <li><strong>Three-Level Sub-IB payouts:</strong> Leverage multi-tier compounding commissions from direct and indirect sub-referrals.</li>
+                                  <li><strong>Automated Daily Payouts:</strong> Withdraw accumulated rewards daily directly from your partner wallet.</li>
+                                  <li><strong>0% withdrawal commissions:</strong> Collect your hard-earned payouts with zero administrative transaction fees.</li>
+                                  <li><strong>Exact conversion equations per lot type:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Minimum monthly active client thresholds:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                  <li><strong>Detailed tracking cookies expiration periods:</strong> NOT SPECIFIED IN SOURCE.</li>
+                                </ul>
+                              </div>
+
+                              {/* CTA Button Block */}
+                              <div className="p-6 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border border-purple-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                                <div className="space-y-1">
+                                  <span className="text-xs font-mono font-bold text-purple-500 dark:text-purple-400 uppercase tracking-widest block">
+                                    Official IB Affiliate Enrollment
+                                  </span>
+                                  <p className="text-xs text-zinc-455 dark:text-zinc-400">
+                                    Become a partner of an award-winning ecosystem. Register your affiliate profile to unlock 42% spread commissions.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleAffiliateRedirect('IB Partner Program Signup', currentPage, 'https://headway.partners/user/signup?hwp=e4e4f5')}
+                                  className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm rounded-xl shrink-0 transition-transform active:scale-95 duration-150 inline-flex items-center space-x-2 shadow-lg shadow-purple-500/20 cursor-pointer"
+                                >
+                                  <span>Become an Introducing Broker</span>
+                                  <ArrowRight className="w-4 h-4" />
+                                </button>
+                              </div>
+                            </div>
+                          )}
+
                           {section.id === 'trading-strategies' && (
                             <div className="space-y-6">
                               <p className="text-zinc-[650] dark:text-zinc-200 text-sm sm:text-base leading-relaxed">
@@ -739,6 +1095,371 @@ export default function App() {
         </div>
       </footer>
 
+    </div>
+  );
+}
+
+function DepositBonusCalculator() {
+  const [amount, setAmount] = useState<number>(100);
+  const bonus = amount * 0.75;
+  const total = amount + bonus;
+  
+  return (
+    <div className="p-6 bg-zinc-50 dark:bg-[#0A0B0D]/50 rounded-2xl border border-zinc-150 dark:border-slate-800/80 space-y-4 text-left">
+      <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+        <span>Interactive Margin Calculator</span>
+      </h4>
+      <p className="text-zinc-450 dark:text-zinc-400 text-xs leading-relaxed">
+        Select or enter a deposit amount to estimate the +75% bonus margin you will receive on your first funding.
+      </p>
+      <div className="space-y-4">
+        <div>
+          <label className="block text-[10px] font-mono font-bold text-zinc-450 dark:text-zinc-450 uppercase tracking-wider mb-2">Select Preset Deposit (USD)</label>
+          <div className="flex flex-wrap gap-2">
+            {[10, 50, 100, 250, 500, 1000].map((val) => (
+              <button
+                key={val}
+                type="button"
+                onClick={() => setAmount(val)}
+                className={`px-4 py-1.5 text-xs font-mono font-bold rounded-xl border transition-all cursor-pointer ${
+                  amount === val
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/10'
+                    : 'bg-white dark:bg-zinc-900 text-zinc-650 dark:text-zinc-350 border-zinc-200 dark:border-slate-800 hover:border-blue-500'
+                }`}
+              >
+                ${val}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-2">
+          <label className="block text-[10px] font-mono font-bold text-zinc-450 dark:text-zinc-450 uppercase tracking-wider mb-2">Custom Deposit Amount</label>
+          <div className="relative rounded-xl shadow-sm max-w-[200px]">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <span className="text-zinc-450 text-xs font-mono font-bold">$</span>
+            </div>
+            <input
+              type="number"
+              min="1"
+              value={amount || ''}
+              onChange={(e) => {
+                const val = parseInt(e.target.value);
+                setAmount(isNaN(val) ? 0 : val);
+              }}
+              className="block w-full pl-7 pr-3 py-1.5 text-xs font-mono font-bold bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white border border-zinc-200 dark:border-slate-800 rounded-xl focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-150 dark:border-slate-800/40">
+          <div className="p-3 bg-white dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/40">
+            <span className="text-[9px] font-mono text-zinc-400 dark:text-zinc-550 block uppercase tracking-wider">YOUR DEPOSIT</span>
+            <span className="text-sm font-bold font-mono text-zinc-900 dark:text-white">${amount}</span>
+          </div>
+          <div className="p-3 bg-white dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/40">
+            <span className="text-[9px] font-mono text-blue-400 block uppercase tracking-wider">75% PROMO BONUS</span>
+            <span className="text-sm font-bold font-mono text-blue-500 dark:text-blue-400">+${(amount * 0.75).toFixed(0)}</span>
+          </div>
+          <div className="p-3 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-xl border border-blue-500/10">
+            <span className="text-[9px] font-mono text-indigo-400 block uppercase tracking-wider">TOTAL TRADING MARGIN</span>
+            <span className="text-sm font-black font-mono text-indigo-500 dark:text-indigo-400">${(amount * 1.75).toFixed(0)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DemoContestsVisualizer() {
+  const [selectedAsset, setSelectedAsset] = useState<string>('EUR/USD');
+  const [tradeDirection, setTradeDirection] = useState<'BUY' | 'SELL' | null>(null);
+  const [simulatedTrades, setSimulatedTrades] = useState<{ id: number; asset: string; direction: 'BUY' | 'SELL'; profit: number }[]>([]);
+  const [leaderboard, setLeaderboard] = useState([
+    { rank: 1, name: "Alpha_Trader_ID", balance: 52140, isUser: false },
+    { rank: 2, name: "Indo_Scalper", balance: 48950, isUser: false },
+    { rank: 3, name: "FX_Championship", balance: 41200, isUser: false },
+    { rank: 4, name: "You (Demo Practice)", balance: 10000, isUser: true },
+    { rank: 5, name: "Micro_Master", balance: 9800, isUser: false }
+  ]);
+
+  const handlePracticeTrade = (dir: 'BUY' | 'SELL') => {
+    setTradeDirection(dir);
+    
+    // Simulate high-impact pricing outcomes
+    setTimeout(() => {
+      const isProfit = Math.random() > 0.4; // 60% chance of profit for high gamification satisfaction
+      const pipChange = parseFloat((Math.random() * 15 + 2).toFixed(1));
+      const calculatedProfit = isProfit ? Math.round(pipChange * 125) : Math.round(-pipChange * 105);
+      
+      const newTrade = {
+        id: Date.now(),
+        asset: selectedAsset,
+        direction: dir,
+        profit: calculatedProfit
+      };
+      
+      setSimulatedTrades(prev => [newTrade, ...prev].slice(0, 5));
+      
+      // Update leaderboard
+      setLeaderboard(prev => {
+        const updated = prev.map(item => {
+          if (item.isUser) {
+            const nextBalance = Math.max(0, item.balance + calculatedProfit);
+            return { ...item, balance: nextBalance };
+          }
+          // slightly update opponents to simulate live contest dynamics
+          return { ...item, balance: Math.round(item.balance + (Math.random() * 200 - 80)) };
+        });
+        
+        // sort leaderboard
+        const sorted = [...updated].sort((a, b) => b.balance - a.balance);
+        return sorted.map((item, idx) => ({ ...item, rank: idx + 1 }));
+      });
+      
+      setTradeDirection(null);
+    }, 800);
+  };
+
+  const userRank = leaderboard.find(item => item.isUser)?.rank || 4;
+  const userBalance = leaderboard.find(item => item.isUser)?.balance || 10000;
+
+  return (
+    <div className="p-6 bg-zinc-50 dark:bg-[#0A0B0D]/50 rounded-2xl border border-zinc-150 dark:border-slate-800/80 space-y-5 text-left">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div className="space-y-1">
+          <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Risk-Free Contest Practice Terminal</span>
+          </h4>
+          <p className="text-zinc-450 dark:text-zinc-400 text-xs leading-relaxed">
+            Test your skills instantly. Predict price movements of primary liquid pairings to climb the simulated 'Face-Off' scoreboard.
+          </p>
+        </div>
+        <div className="px-3 py-1 bg-blue-500/10 rounded-full border border-blue-500/20 w-max shrink-0 self-start sm:self-center">
+          <span className="text-[10px] font-mono font-bold text-blue-500 dark:text-blue-450">DEMO PRACTICE MODE</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* Practice Control Pad */}
+        <div className="p-4 bg-white dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/40 space-y-4">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-bold text-zinc-400 font-mono uppercase tracking-wider">Trading Asset</span>
+            <select
+              value={selectedAsset}
+              onChange={(e) => setSelectedAsset(e.target.value)}
+              className="text-xs bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-white border border-zinc-200 dark:border-slate-800 rounded-lg px-2 py-1 focus:ring-1 focus:ring-blue-500 outline-none"
+            >
+              <option value="EUR/USD">EUR/USD (Forex)</option>
+              <option value="XAU/USD">Gold (Metals)</option>
+              <option value="BTC/USD">Bitcoin (Cryptos)</option>
+              <option value="US30">Dow Jones (Indices)</option>
+            </select>
+          </div>
+
+          <div className="p-3 bg-zinc-50 dark:bg-zinc-950/50 rounded-lg border border-zinc-150 dark:border-slate-800/30 flex justify-between items-center">
+            <span className="text-xs text-zinc-455 dark:text-zinc-400">Practice Account:</span>
+            <span className="text-sm font-black font-mono text-zinc-900 dark:text-white">${userBalance.toLocaleString()}</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 pt-1">
+            <button
+              type="button"
+              disabled={tradeDirection !== null}
+              onClick={() => handlePracticeTrade('BUY')}
+              className="py-2.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold text-xs rounded-xl cursor-pointer transition-all hover:scale-[1.02] active:scale-95 text-center block"
+            >
+              {tradeDirection === 'BUY' ? 'Opening...' : '📈 BUY (Long)'}
+            </button>
+            <button
+              type="button"
+              disabled={tradeDirection !== null}
+              onClick={() => handlePracticeTrade('SELL')}
+              className="py-2.5 bg-rose-600 hover:bg-rose-500 disabled:opacity-50 text-white font-bold text-xs rounded-xl cursor-pointer transition-all hover:scale-[1.02] active:scale-95 text-center block"
+            >
+              {tradeDirection === 'SELL' ? 'Opening...' : '📉 SELL (Short)'}
+            </button>
+          </div>
+
+          {/* Practice History */}
+          <div className="space-y-1.5 pt-2 border-t border-zinc-100 dark:border-slate-800/40">
+            <span className="text-[9px] font-mono font-bold text-zinc-400 block uppercase tracking-wider mb-1">Recent Execution Feeds</span>
+            {simulatedTrades.length === 0 ? (
+              <p className="text-[10px] text-zinc-450 italic py-1">No orders opened yet. Execute BUY or SELL to experience live matching.</p>
+            ) : (
+              <div className="space-y-1">
+                {simulatedTrades.map((t) => (
+                  <div key={t.id} className="flex items-center justify-between text-[11px] font-mono py-1 border-b border-zinc-50 dark:border-slate-800/20 last:border-0">
+                    <span className="text-zinc-455 dark:text-zinc-400">{t.asset} ({t.direction})</span>
+                    <span className={t.profit >= 0 ? 'text-emerald-500 font-bold' : 'text-rose-500 font-bold'}>
+                      {t.profit >= 0 ? `+$${t.profit}` : `-$${Math.abs(t.profit)}`}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Live Contest Standings */}
+        <div className="p-4 bg-white dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/40 space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-bold text-zinc-400 font-mono uppercase tracking-wider">Live Face-Off Standings</span>
+            <span className="text-[10px] font-mono text-zinc-450 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Active Pool: $3,150</span>
+          </div>
+
+          <div className="space-y-1.5">
+            {leaderboard.map((item) => (
+              <div
+                key={item.name}
+                className={`flex items-center justify-between p-2 rounded-xl text-xs transition-colors duration-200 ${
+                  item.isUser
+                    ? 'bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold'
+                    : 'bg-zinc-50 dark:bg-zinc-900/20 border border-transparent text-zinc-650 dark:text-zinc-350'
+                }`}
+              >
+                <div className="flex items-center space-x-2">
+                  <span className="font-mono text-[10px] text-zinc-400 w-4">#{item.rank}</span>
+                  <span>{item.name}</span>
+                </div>
+                <span className="font-mono">${item.balance.toLocaleString()}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-2 text-center">
+            <span className="text-[10px] text-zinc-450 dark:text-zinc-400 font-medium">
+              Your Current simulated Standing: <strong className="text-blue-500 font-bold">#{userRank} out of 5</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function IBCommissionCalculator() {
+  const [directClients, setDirectClients] = useState<number>(15);
+  const [lotsPerClient, setLotsPerClient] = useState<number>(5);
+  const [subIbsCount, setSubIbsCount] = useState<number>(3);
+  
+  // Commission calculations based on standard Headway parameters
+  const directCommission = directClients * lotsPerClient * 12;
+  const tier2Commission = subIbsCount * 5 * 5 * 2;
+  const tier3Commission = subIbsCount * 2 * 5 * 5 * 1;
+  const totalMonthlyEarnings = directCommission + tier2Commission + tier3Commission;
+
+  return (
+    <div className="p-6 bg-zinc-50 dark:bg-[#0A0B0D]/50 rounded-2xl border border-zinc-150 dark:border-slate-800/80 space-y-6 text-left">
+      <div className="space-y-1">
+        <h4 className="font-bold text-sm text-zinc-900 dark:text-white flex items-center space-x-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+          <span>Interactive Partner Revenue Calculator</span>
+        </h4>
+        <p className="text-zinc-450 dark:text-zinc-400 text-xs leading-relaxed">
+          Simulate your potential passive earnings as a Headway Introducing Broker (IB). Adjust sliders to see multi-tier compounding effects.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Sliders Container */}
+        <div className="space-y-4">
+          {/* Direct Clients */}
+          <div className="space-y-2">
+            <div className="flex justify-between items-center text-xs">
+              <span className="font-semibold text-zinc-650 dark:text-zinc-350">Direct Referrals (Tier 1)</span>
+              <span className="font-mono font-bold text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">{directClients} clients</span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value={directClients}
+              onChange={(e) => setDirectClients(parseInt(e.target.value))}
+              className="w-full accent-purple-600 cursor-pointer h-1 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none"
+            />
+            <div className="flex justify-between text-[9px] text-zinc-400 font-mono">
+              <span>1 Client</span>
+              <span>100 Clients</span>
+            </div>
+          </div>
+
+          {/* Lots traded */}
+          <div className="space-y-2">
+            <div className="flex justify-between items-center text-xs">
+              <span className="font-semibold text-zinc-650 dark:text-zinc-350">Avg Standard Lots Traded (Per Client / Mo)</span>
+              <span className="font-mono font-bold text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">{lotsPerClient} Lots</span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="50"
+              value={lotsPerClient}
+              onChange={(e) => setLotsPerClient(parseInt(e.target.value))}
+              className="w-full accent-purple-600 cursor-pointer h-1 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none"
+            />
+            <div className="flex justify-between text-[9px] text-zinc-400 font-mono">
+              <span>1 Lot</span>
+              <span>50 Lots</span>
+            </div>
+          </div>
+
+          {/* Sub-IB Count */}
+          <div className="space-y-2">
+            <div className="flex justify-between items-center text-xs">
+              <span className="font-semibold text-zinc-650 dark:text-zinc-350">Sub-IB Partners Recruited (Tier 2 &amp; Tier 3)</span>
+              <span className="font-mono font-bold text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">{subIbsCount} Partners</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="20"
+              value={subIbsCount}
+              onChange={(e) => setSubIbsCount(parseInt(e.target.value))}
+              className="w-full accent-purple-600 cursor-pointer h-1 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none"
+            />
+            <div className="flex justify-between text-[9px] text-zinc-400 font-mono">
+              <span>0 Partners</span>
+              <span>20 Partners</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Results Container */}
+        <div className="p-5 bg-white dark:bg-zinc-900/40 rounded-xl border border-zinc-150 dark:border-slate-800/40 flex flex-col justify-between">
+          <div className="space-y-3">
+            <span className="text-[11px] font-bold text-zinc-400 font-mono uppercase tracking-wider block">Estimated Monthly Payouts</span>
+            
+            <div className="space-y-2 text-xs">
+              <div className="flex justify-between text-zinc-650 dark:text-zinc-350 border-b border-zinc-100 dark:border-slate-800/40 pb-2">
+                <span>Direct Commission (Tier 1):</span>
+                <span className="font-mono font-bold">${directCommission.toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between text-zinc-650 dark:text-zinc-350 border-b border-zinc-100 dark:border-slate-800/40 pb-2">
+                <span>Sub-IB Commission (Tier 2):</span>
+                <span className="font-mono font-bold">${tier2Commission.toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between text-zinc-650 dark:text-zinc-350 border-b border-zinc-100 dark:border-slate-800/40 pb-2">
+                <span>Sub-IB Commission (Tier 3):</span>
+                <span className="font-mono font-bold">${tier3Commission.toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 mt-4 border-t border-zinc-150 dark:border-slate-800/80 flex items-center justify-between">
+            <div className="space-y-1">
+              <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-widest block">PASSIVE MONTHLY TOTAL</span>
+              <span className="text-xl font-black font-mono text-purple-600 dark:text-purple-400">${totalMonthlyEarnings.toLocaleString()}</span>
+            </div>
+            <div className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full">
+              <span className="text-[9px] font-mono font-bold text-purple-500 dark:text-purple-450">Up to 42% Spread</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

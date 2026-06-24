@@ -105,6 +105,81 @@ export const homepageSEOSections: ContentSection[] = [
     ]
   },
   {
+    id: "deposit-bonus-promotion",
+    title: "Headway +75% Deposit Bonus: Margin Booster Promotion",
+    subtitle: "Claim a substantial equity boost on your first deposit to elevate your market leverage",
+    paragraphs: [
+      "The Headway 75% Deposit Bonus is a premier promotional offering designed to significantly expand your market purchasing power. Available to both new and seasoned market participants, this margin-boosting incentive applies directly to your first deposit on Cent and Standard accounts, helping you control larger contract sizes or withstand deeper market corrections without immediate margin-call risk.",
+      "Under the official rules, when you fund your active live trading account with any amount above the minimum required threshold, Headway credits your equity ledger with an additional +75% of your deposit value. The bonus funds act as direct support for your open positions, allowing you to maximize trade volume and take advantage of volatile movements in currency pairs, indices, or digital assets.",
+      "To secure this incentive, traders must select the promotion inside their personal client dashboard before or during the deposit process. Trading execution requirements, minimum volume specifications, and specific profit withdrawal conditions are fully outlined in your client portal, providing complete transparency for professional operators."
+    ],
+    keyTerms: [
+      { term: "75% Deposit Bonus", definition: "A promotional incentive adding 75% extra credit to your first deposit, fully usable as trading margin support." },
+      { term: "Margin Boost", definition: "The technical increase in usable margin, allowing traders to hold larger position sizes relative to their initial deposits." },
+      { term: "Cent & Standard Tiers", definition: "The primary account categories eligible for the deposit bonus, catering to both micro and standard-scale operators." }
+    ]
+  },
+  {
+    id: "bonus-150-promotion",
+    title: "Headway $150 No-Deposit Bonus: Risk-Free 7-Day Trading Trial",
+    subtitle: "Start trading five global asset classes with zero personal capital and withdraw up to $100 profit",
+    paragraphs: [
+      "The Headway $150 No-Deposit Bonus is an exceptional risk-free launchpad designed to let retail participants experience real market conditions without committing personal capital. Upon registration and activation of the promo account, clients are instantly credited with a $150 trading balance, allowing them to test strategies across five distinct market categories: Forex, Cryptocurrencies, Energies, Indices, and Metals.",
+      "This highly structured promotion spans an active 7-day trading period. During this time, traders can open and close real-market contracts, experiencing the lightning-fast 0.16-second execution speed of the Headway ECN/STP engine. It serves as an elite technical sandbox where your trading acumen dictates your financial success, completely removing the barrier of initial capital costs.",
+      "After the 7-day period concludes, the initial $150 bonus is automatically removed. However, any trading profits generated during the trial—up to a maximum cap of $100 USD—can be transferred to your real Standard or Cent account as withdrawable balance, subject to trading a specified number of standard lots, providing a genuine avenue to build capital from scratch."
+    ],
+    keyTerms: [
+      { term: "$150 No-Deposit Bonus", definition: "A risk-free promotional balance credited to new accounts, allowing immediate live trading without personal funding." },
+      { term: "7-Day Active Period", definition: "The strict promotional timeframe during which the no-deposit capital remains active for open market execution." },
+      { term: "Withdrawable Profits", definition: "The ability to transfer and withdraw up to $100 USD of profits earned during the trial after meeting lot volume criteria." }
+    ]
+  },
+  {
+    id: "giftshop-promotion",
+    title: "Headway Giftshop: Trade Market Lots & Redeem Luxury Prizes",
+    subtitle: "Collect gold crowns for every traded standard lot and trade them for premium gadgets and merchandise",
+    paragraphs: [
+      "The Headway Giftshop is an exclusive, long-term loyalty program that rewards active trading volume with luxury merchandise, high-end electronics, and cash vouchers. Unlike short-term contests, the Giftshop is a continuous celebration of trader commitment, where every completed lot on Cent, Micro, Standard, or Pro accounts contributes to your premium prize accumulation.",
+      "The core loyalty mechanic relies on collecting 'Crowns.' For every standard lot executed on the terminal, traders earn a specific quantity of crowns. As your crown balance grows, you can visit the digital Giftshop catalog inside the personal cabinet to redeem them. Prizes range from official high-quality Headway broker merchandise and hoodies to the latest Apple iPhones, flagship tablets, custom laptops, and other valuable gadgets.",
+      "To celebrate new participants, Headway awards every trader 2 free Crowns immediately upon joining the Giftshop promotion, giving you an instant head start on your reward journey. Terms and conditions are completely transparent: standard order execution rules apply, and there are absolutely no hidden fees or shipping costs on your redeemed merchandise."
+    ],
+    keyTerms: [
+      { term: "Headway Giftshop", definition: "An exclusive loyalty portal where clients redeem accumulated trade credits for premium tangible awards and merch." },
+      { term: "Gold Crowns", definition: "The official loyalty point currency earned proportionally for every standard market lot completed on the platform." },
+      { term: "2 Free Crowns", definition: "A welcoming loyalty bonus credited immediately to participants upon joining the Giftshop program." }
+    ]
+  },
+  {
+    id: "demo-contests-promotion",
+    title: "Headway Risk-Free Demo Contests: $3,150 Face-Off & Cash Rewards",
+    subtitle: "Sharpen your tactical trading skills with virtual capital and win withdrawable cash prizes",
+    paragraphs: [
+      "The Headway Demo Contests represent a premier, risk-free competitive arena designed specifically for traders who want to test their tactical execution under real-market conditions without risking physical capital. In these structured, highly engaging tournaments, participants are allocated virtual trading balances to navigate live market feeds across five core asset classes. It serves as an elite technical testing ground where discipline, strategy, and execution speed dictate your standing.",
+      "A flagship event in this category is the Headway 'Face-Off' Demo Contest, a revolutionary team-based trading tournament featuring a combined cash prize pool of $3,150 USD. In this contest, global traders form competitive alliances or join team ranks, working in concert to maximize their aggregate demo account balances. The team with the highest final equity is crowned victorious, with the cash reward pool distributed directly among the top-performing members' live accounts, fully available for immediate withdrawal or as usable trading margin.",
+      "Participation in Headway Demo Contests is 100% free of charge, with absolutely zero entry fees or registration costs. Traders enjoy the exact same high-speed 0.16-second execution times, professional MetaTrader 4 or MetaTrader 5 interfaces, and tight live market spreads characteristic of real Headway Standard and Pro accounts. It offers an incredible pathway to climb from a beginner demo trader to a capitalized professional with real withdrawable winnings."
+    ],
+    keyTerms: [
+      { term: "Face-Off Demo Contest", definition: "A team-based trading tournament with a $3,150 prize pool where traders compete risk-free using virtual balances." },
+      { term: "$3,150 Prize Pool", definition: "The official cash rewards allocated to the top competitors, credited directly to withdrawable live ledger balances." },
+      { term: "Risk-Free Execution", definition: "The ability to trade real-time market feeds without any personal financial exposure or deposit requirements." }
+    ]
+  },
+  {
+    id: "ib-partner-program",
+    title: "Headway IB Partnership Program: Earn Up to 42% Commission",
+    subtitle: "Join an award-winning three-tier affiliate network with instant daily payouts and zero fees",
+    paragraphs: [
+      "The Headway IB (Introducing Broker) Partnership Program is a highly lucrative, multi-level affiliate ecosystem designed for digital marketers, financial influencers, trading educators, and local representatives. Honored with the prestigious 'Best Partners Program' award, this professional network enables partners to build a sustainable, passive revenue stream by introducing new active clients to Headway’s high-performance brokerage environment.",
+      "The program features an exceptionally high commission model, paying out up to 42% of the broker's spread on every single trade executed by your referred clients. Additionally, the network is built on a progressive three-tier (multilevel) hierarchy, meaning you earn commissions not only from your direct referrals (Tier 1) but also from sub-IBs down to Tier 2 and Tier 3. This compounding structure maximizes your earning potential relative to traditional, single-tier affiliate systems.",
+      "Headway provides its global partners with an advanced digital cabinet featuring real-time click and registration tracking, automated commission accrual, and daily payouts directly to your partner wallet with 0% withdrawal fees. Partners gain instant access to high-converting localized banners, web widgets, referral links, and dedicated personal account managers to optimize their promotional campaigns and ensure maximum conversion rates."
+    ],
+    keyTerms: [
+      { term: "Up to 42% Commission", definition: "A premier payout rate representing up to 42% of the broker's spread on all referred client transactions." },
+      { term: "Three-Tier Affiliate Network", definition: "A multi-level partner hierarchy allowing IBs to earn passive commissions from direct clients and sub-referral layers." },
+      { term: "Daily Wallet Payouts", definition: "Instant daily commission settlement with zero withdrawal fees, ensuring rapid access to your earned partner capital." }
+    ]
+  },
+  {
     id: "trading-strategies",
     title: "6. Educational Forex Strategies for Modern Market Contexts",
     subtitle: "Analyzing Trend-Following, Swing Trading, Scalping, and Capital Allocation",
